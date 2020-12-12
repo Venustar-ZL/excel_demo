@@ -1,0 +1,64 @@
+# 自定义配置文件
+header:
+  # 是否需要精确匹配
+  accurate: false
+  # 表头颜色
+  bgColor:
+  # 表头文字格式
+  pattern:
+    #- .*(?i)(上海|中国|LINES).*
+  # 表头样式
+  style:
+    - NONE
+    - THIN
+  # 表头字体颜色
+  fontColor:
+  # 是否需要解析
+  needParse: false
+  # 范围
+  rowRange: 1
+
+
+content:
+  titleFeature:
+    color:
+    pattern:
+      - .*(?i)(船    名|船名).*
+    style:
+  # 标题中需要解析的列
+  ignoreColumn:
+    - .*(?i)(IRIS).*
+    - .*(?i)(IRIS2 CODE).*
+    - .*(?i)(周).*
+  # 通用属性
+  column:
+    - vesselName(String,1)
+    - carrierVoyageNo(String,1)
+    - vesselCode(String,1)
+    - terminalVoyageNo(String,1)
+    - etd(Date,1)
+    - portTerminalOfBerthingName(String,2)
+    - vesselOperatorCode(String,1)
+    - vgmCutOffTime(Date,2)
+  # 可变属性
+  special:
+    - 开航
+    - 挂靠码头
+
+tail:
+  # 是否需要精确匹配
+  accurate: false
+  # 表尾颜色
+  bgColor:
+  # 表尾格式
+  pattern:
+  # 表尾样式
+  style:
+    - NONE
+    - THIN
+  # 表尾字体颜色
+  fontColor: 89
+  # 是否需要解析
+  needParse: false
+  # 范围
+  rowRange: 1
